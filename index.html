@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Time</title>
+	 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<div class = "container">
+		<div class = "jumbotron">
+			<h1>Anytime is Train Time</h1>
+			<h3>Choo Choo. Chee Chee.</h3>
+		</div>
+
+		<div class="panel panel-default">
+  			<div class="panel-heading">Current Train Schedule</div>
+
+  			<div class="panel-body">
+  				<table class="table table-striped">
+					<thead>
+					   	<tr>
+						    <th class="data-header" id="trainNameData">Train Name</th>
+						    <th class="data-header" id="destinationData">Destination</th>
+						    <th class="data-header" id="frequencyData">Frequency (min)</th>
+						    <th class="data-header" id="nextArrivalData">Next Arrival</th>
+						    <th class="data-header" id="minutesAwayData">Minutes Away</th>
+					    </tr>
+					</thead>
+
+					<tbody class = "train-data-table"></tbody>
+				</table>
+  			</div>
+		</div>
+		<br>
+
+		<div class="panel panel-default">
+  			<div class="panel-heading">Add Train</div>
+
+  			<div class="panel-body">
+
+  				<div class="form-group">
+  					<label for="usr">Train Name</label>
+ 					 <input type="text" class="form-control" id="trainName">
+				</div>
+
+  				<div class="form-group">
+  					<label for="usr">Destination</label>
+ 					 <input type="text" class="form-control" id="destination" >
+				</div>
+
+  				<div class="form-group">
+  					<label for="usr">First Train Time (HH:mm - military time)</label>
+ 					 <input type="text" class="form-control" id="firstTrainTime">
+				</div>
+
+				<div class="form-group">
+					<label for="usr">Frequency (min)</label>
+					<input type="text" class="form-control" id="frequency">
+				</div>
+
+				<button type="button" class="btn btn-primary submit">Submit</button>
+
+  			</div>
+		</div>
+
+	</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
